@@ -1,15 +1,20 @@
-import React from "react";
+import React from 'react'
 
-type clickfunctionstype =
+type buttonType = 
 {
-    clickit: any
-      
+  buttonN: any
+  Hanldefunc: any
+  disablecount?: any
+  counavlue?: any
 }
 
-const Button = (props:clickfunctionstype) => {
-  return <button onClick={props.clickit}> Click me! </button>
-};
 
+const Buttons = (props:buttonType) => {
+  return (
+    <div>
+    <button type="button" className="btn btn-danger" onClick={props.Hanldefunc} disabled={props.disablecount == 0}> {props.buttonN}  </button>
+    </div>
+  )
+}
 
-
-export default Button;
+export default Buttons
